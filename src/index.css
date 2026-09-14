@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-white text-ink antialiased;
+  }
+}
+
+@layer utilities {
+  /* Reusable gradient text — relies on the single brand-gradient background image
+     defined in tailwind.config.js, so re-theming only ever touches one place. */
+  .text-gradient {
+    @apply bg-brand-gradient bg-clip-text text-transparent;
+  }
+}
